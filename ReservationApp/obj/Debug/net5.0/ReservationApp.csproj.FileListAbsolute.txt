@@ -25,7 +25,6 @@ C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\Reser
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\ReservationApp.dll
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\ref\ReservationApp.dll
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\ReservationApp.pdb
-C:\Users\amori\repos\RestaurantReservation\ReservationApp\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\bin\Debug\net5.0\appsettings.json
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\bin\Debug\net5.0\ReservationApp.exe
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\bin\Debug\net5.0\ReservationApp.deps.json

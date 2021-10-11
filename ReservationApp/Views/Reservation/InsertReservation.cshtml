@@ -1,6 +1,6 @@
 ﻿@model Reservation
 <h2>Create a New Reservation</h2>
-@using (Html.BeginForm("UpdateReservationToDatabase", "Reservation", FormMethod.Get))
+@using (Html.BeginForm("InsertReservationToDatabase", "Reservation", FormMethod.Get))
 {
     <input asp-for="ID" type="hidden" value="" />
     <label asp-for="Date" class="control-label">Date</label>

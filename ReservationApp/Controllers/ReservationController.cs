@@ -57,9 +57,9 @@ namespace ReservationApp.Controllers
             return View(res);
         }
 
-        public IActionResult InsertProductToDatabase(Reservation reservationToInsert)
+        public IActionResult InsertReservationToDatabase(Reservation reservationToInsert)
         {
-            repo.InsertProduct(reservationToInsert);
+            repo.InsertReservation(reservationToInsert);
 
             return RedirectToAction("Index");
         }

@@ -10,7 +10,7 @@ namespace ReservationApp
     {
         public IEnumerable<Reservation> GetReservations();
         public Reservation GetReservation(int id);
-        public void InsertProduct(Reservation reservationToInsert);
+        public void InsertReservation(Reservation reservationToInsert);
         public IEnumerable<TimeSlot> GetTimeSlots();
         public Reservation AssignTimeSlot();
         void UpdateReservation(Reservation res);

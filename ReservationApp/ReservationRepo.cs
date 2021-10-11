@@ -33,17 +33,18 @@ namespace ReservationApp
         public void UpdateReservation(Reservation reservation)
         {
             _conn.Execute("UPDATE reserved SET First_Name = @first_name, Last_Name = @last_name, Date = @date, " +
-                "Time = @time, Table_Size = @table_size, TABLE_BOOKED = @table_booked WHERE ID = @id",
+                "Time = @time, Table_Size = @table_size WHERE ID = @id;",
                 new { first_name =reservation.First_Name, last_name = reservation.Last_Name, date = reservation.Date, 
                     time = reservation.Time, table_size = reservation.Table_Size, id = reservation.ID });
         }
 
-        public void InsertProduct(Reservation reservationToInsert)
+        public void InsertReservation(Reservation reservationToInsert)
         {
             {
                 _conn.Execute("INSERT INTO reservation (FIRST_NAME, LAST_NAME, DATE, TIME, TABLE_SIZE, ID) VALUES (@first_name, @last_name," +
                     "@date, @time, @table_size, @ID);",
-                    new { date = reservationToInsert.Date, time = reservationToInsert.Time, ID = reservationToInsert.ID });
+                    new { first_name = reservationToInsert.First_Name, last_name = reservationToInsert.Last_Name, date = reservationToInsert.Date, 
+                        time = reservationToInsert.Time, table_size = reservationToInsert.Table_Size, ID = reservationToInsert.ID });
             }
 
         }
