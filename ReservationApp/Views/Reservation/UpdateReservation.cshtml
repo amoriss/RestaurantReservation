@@ -1,0 +1,19 @@
+﻿@model Reservation
+
+<h2>Update @Model.ID</h2>
+
+@using (Html.BeginForm("UpdateReservationToDatabase", "Reservation", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+    <label asp-for="Date" class="control-label">Date</label>
+
+    <input type="text" name="Time" class="form-control" value="@Model.Time" />
+
+    <label asp-for="Booked" class="control-label">Booked</label>
+    <!---
+    <input type="number" step="0.01" name="Price" class="form-control" value="." />
+    -->
+    <input type="submit" value="Update Reservation" class="btn btn-primary" />
+
+}

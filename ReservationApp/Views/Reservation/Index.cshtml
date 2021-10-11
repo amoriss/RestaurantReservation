@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<Reservation>
+
+<h2>Reservation</h2>
+
+<div style="display: block">
+    <a href="/Reservation/InsertReservation/">Create a New Reservation</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Table Size</th>
+        <th>Booked</th>
+    </tr>
+
+    @foreach (var reservation in Model)
+    {
+<tr>
+    <td><a href=/Reservation/ViewReservation/@reservation.ID>@reservation.ID</a></td>
+    <td>@reservation.First_Name </td> <!--added-->
+    <td>@reservation.Last_Name</td>   <!--added-->
+    <td>@reservation.Date</td>
+    <td>@reservation.Time</td>
+    <td>@reservation.Table_Size</td> <!--added-->
+    <td>@reservation.Booked</td>
+
+</tr>
+
+    }
+</table>
+

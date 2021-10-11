@@ -1,0 +1,37 @@
+﻿@model Reservation
+
+<h3>@Model.ID Information</h3>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Booked</th>
+        <th>-----</th>
+        <th>-----</th>
+    </tr>
+    <tr>
+        <td>@Model.ID</td>
+        <td>@Model.Date</td>
+        <td>@Model.Time</td>
+        <td>@Model.Booked</td>
+        <td>----------</td>
+        <td>----------</td>
+    </tr>
+
+</table>
+
+<div style="display: block">
+    <a href="/Reservation/UpdateReservation/@Model.ID">Update this Reservation</a>
+</div>
+
+<div style="display: block">
+    @using (Html.BeginForm("DeleteReservation", "Reservation", "Post"))
+    {
+        <input type="hidden" asp-for="ID" value="@Model.ID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this reservation" />
+    }
+</div>
+
+
