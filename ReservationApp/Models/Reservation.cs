@@ -19,6 +19,6 @@ namespace ReservationApp.Models
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
         public bool Booked { get; set; } = false;
-        public IEnumerable<Reservation> TimeSlots { get; set; }
+        public IEnumerable<TimeSlot> TimeSlots { get; set; }
     }
 }

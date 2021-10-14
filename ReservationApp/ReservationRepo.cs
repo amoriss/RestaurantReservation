@@ -49,21 +49,19 @@ namespace ReservationApp
 
         }
 
-        public IEnumerable<TimeSlot> GetTimeSlots()
+        public Reservation GetTimeSlots(Reservation reservation)
         {
-            return _conn.Query<TimeSlot>("SELECT * FROM reservation;");
+            var slots = _conn.Query<TimeSlot>("SELECT Time FROM reserved Where Date like @date;",
+                new {date = reservation.Date });
+
+            var reservation2 = new Reservation();
+            reservation2.TimeSlots = slots;
+            return reservation2;
         }
 
+     
 
-        public Reservation AssignTimeSlot()
-        {
-            var reservationList = GetReservations();
-            var reservation= new Reservation();
-            reservation.TimeSlots = reservationList;
-
-            return reservation;
-        }
-
+      
         public void DeleteReservation(Reservation reservation)
         {
             _conn.Execute("DELETE FROM RESERVED WHERE ID = @id;",
@@ -71,6 +69,6 @@ namespace ReservationApp
             
         }
 
-        
+       
     }
 }

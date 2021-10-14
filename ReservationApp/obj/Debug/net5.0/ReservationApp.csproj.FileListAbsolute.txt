@@ -53,3 +53,4 @@ C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\Reser
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\Razor\Views\Reservation\ViewReservation.cshtml.g.cs
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\Razor\Views\Reservation\InsertReservation.cshtml.g.cs
 C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\Razor\Views\Reservation\UpdateReservation.cshtml.g.cs
+C:\Users\amori\repos\RestaurantReservation\ReservationApp\obj\Debug\net5.0\Razor\Views\Reservation\SelectTime.cshtml.g.cs
