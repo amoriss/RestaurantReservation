@@ -41,10 +41,10 @@ namespace ReservationApp
         public void InsertReservation(Reservation reservationToInsert)
         {
             {
-                _conn.Execute("INSERT INTO reservation (FIRST_NAME, LAST_NAME, DATE, TIME, TABLE_SIZE, ID) VALUES (@first_name, @last_name," +
-                    "@date, @time, @table_size, @ID);",
+                _conn.Execute("INSERT INTO reserved (FIRST_NAME, LAST_NAME, DATE, TIME, TABLE_SIZE, BOOKED, ID) VALUES (@first_name, @last_name," +
+                    "@date, @time, @table_size, @booked, @ID);",
                     new { first_name = reservationToInsert.First_Name, last_name = reservationToInsert.Last_Name, date = reservationToInsert.Date, 
-                        time = reservationToInsert.Time, table_size = reservationToInsert.Table_Size, ID = reservationToInsert.ID });
+                        time = reservationToInsert.Time, table_size = reservationToInsert.Table_Size, booked= true, ID = reservationToInsert.ID });
             }
 
         }
