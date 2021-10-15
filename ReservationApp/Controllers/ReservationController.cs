@@ -56,12 +56,18 @@ namespace ReservationApp.Controllers
 
             return View(reservation);
         }
+        public IActionResult InsertReservationToDatabase(Reservation reservation)
+        {
+            repo.InsertReservation(reservation);
+
+            return RedirectToAction("Index");
+        }
 
         public IActionResult SelectTime(Reservation reservationToInsert)
         {
-            var reswithslots = repo.GetTimeSlots(reservationToInsert);
+            reservationToInsert = repo.GetTimeSlots(reservationToInsert);
 
-            reservationToInsert.TimeSlots = reswithslots.TimeSlots;
+            
 
             return View(reservationToInsert);
         }

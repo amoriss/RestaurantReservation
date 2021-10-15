@@ -52,11 +52,13 @@ namespace ReservationApp
         public Reservation GetTimeSlots(Reservation reservation)
         {
             var slots = _conn.Query<TimeSlot>("SELECT Time FROM reserved Where Date like @date;",
-                new {date = reservation.Date });
+                new {date = reservation.Date }).ToList();
 
-            var reservation2 = new Reservation();
-            reservation2.TimeSlots = slots;
-            return reservation2;
+            
+            reservation.TimeSlots = reservation.TimeSlots.Where(item => !slots.Any(item2 => item2.Time == item)).ToList<string>();
+            
+            //reservation2.TimeSlots = slots;
+            return reservation;
         }
 
      

@@ -1,43 +1,42 @@
 ﻿@model Reservation
-<h2>Create a New Reservation</h2>
-@using (Html.BeginForm("SelectTime", "Reservation", FormMethod.Get))
+<h2>Times available for @Model.DateParse()</h2>
+@using (Html.BeginForm("InsertReservationToDatabase", "Reservation", FormMethod.Post))
 {
-    <input asp-for="ID" type="hidden" value="" />
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+    <input asp-for="First_Name" type="hidden" value="@Model.First_Name" />
+    <input asp-for="Last_Name" type="hidden" value="@Model.Last_Name" />
+    <input asp-for="Date" type="hidden" value="@Model.Date" />
 
     @*<label asp-for="First_Name" class="control-label">First Name</label>
-    <input type="text" name="First_Name" class="form-control" value="@Model.First_Name" />
+        <input type="text" name="First_Name" class="form-control" value="@Model.First_Name" />
 
-    <label asp-for="Last_Name" class="control-label">Last Name</label>
-    <input type="text" name="Last_Name" class="form-control" value="@Model.Last_Name" />
-
-
-    <label asp-for="Date" class="control-label">Date</label>
-    <input type="date" name="Date" class="form-control" value="" />*@
-
-    @foreach(var time in Model.TimeSlots)
-                {
-
-                <label asp-for="Date" class="control-label">@time</label>
-                }
-        <input type="radio" value="1:15" id="Gender" name="Time" />
+        <label asp-for="Last_Name" class="control-label">Last Name</label>
+        <input type="text" name="Last_Name" class="form-control" value="@Model.Last_Name" />
 
 
-        <label asp-for="Time" class="control-label">Time</label>
-        <input type="time" step="900" name="Time" class="form-control" />
+        <label asp-for="Date" class="control-label">Date</label>
+        <input type="date" name="Date" class="form-control" value="" />*@
 
-    <label asp-for="Table_Size" class="control-label">Table Size</label>
-    <input type="number" name="Table_Size" class="form-control" value="@Model.Table_Size" />
+    @foreach (var time in Model.TimeSlots)
+    {
+
+        <label asp-for="Time" class="control-label">@time</label>
+        <input type="radio" value="@time" name="Time" />
+    }
+
+
+
 
     <div class="form-group">
         @*<label for="">Select a Time Slot</label>
-        <select class="form-control" name="ID" value="">
-            @foreach (var res in Model.TimeSlots)
-            {
-                <option value="@res.ID">@res.ID @res.Time</option>
-            }
-            <a href="C:\Users\amori\repos\RestaurantReservation\ReservationApp\Views\_ViewStart.cshtml">C:\Users\amori\repos\RestaurantReservation\ReservationApp\Views\_ViewStart.cshtml</a>
-        </select>*@
+            <select class="form-control" name="ID" value="">
+                @foreach (var res in Model.TimeSlots)
+                {
+                    <option value="@res.ID">@res.ID @res.Time</option>
+                }
+                <a href="C:\Users\amori\repos\RestaurantReservation\ReservationApp\Views\_ViewStart.cshtml">C:\Users\amori\repos\RestaurantReservation\ReservationApp\Views\_ViewStart.cshtml</a>
+            </select>*@
     </div>
     <input type="submit" value="Select Time" class="btn btn-primary" />
 }
-
+<a href=/Reservation/Index>Cancel</a>
