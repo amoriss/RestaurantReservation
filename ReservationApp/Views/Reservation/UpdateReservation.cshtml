@@ -1,10 +1,11 @@
 ﻿@model Reservation
 
-<h2>Update @Model.ID</h2>
+<h2>Update reservation for @Model.First_Name @Model.Last_Name</h2>
 
-@using (Html.BeginForm("UpdateReservationToDatabase", "Reservation", "Post"))
+@using (Html.BeginForm("UpdateTime", "Reservation", FormMethod.Post))
 {
     <input asp-for="ID" type="hidden" value="@Model.ID" />
+    <input asp-for="Time" type="hidden" value="@Model.Time" />
 
     <label asp-for="First_Name" class="control-label">First Name</label>
     <input type="text" name="First_Name" class="form-control" value="@Model.First_Name" />
@@ -15,19 +16,13 @@
     <label asp-for="Date" class="control-label">Date</label>
     <input type="date" name="Date" class="form-control" value="@Model.Date" />
 
-    <label asp-for="Time" class="control-label">Time</label>
-    <input type="time" name="Time" class="form-control" value="@Model.Time" />
-
     <label asp-for="Table_Size" class="control-label"></label>
     <input type="number" name="Table_Size" class="form-control" value="@Model.Table_Size" />
 
 
 
 
-    <!---<label asp-for="DeleteReservation" class="control-label">Cancel</label>->
-
-    < !--<input type="number" step="0.01" name="Price" class="form-control" value="." />
-    -->
-    <input type="submit" value="Update Reservation" class="btn btn-primary" />
+    <input type="submit" value="Select New Time"class="btn btn-primary" />
 
 }
+<a href=/Reservation/Index>Cancel</a>

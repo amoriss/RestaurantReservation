@@ -71,6 +71,15 @@ namespace ReservationApp.Controllers
 
             return View(reservationToInsert);
         }
+        public IActionResult UpdateTime(Reservation reservationToInsert)
+        {
+            reservationToInsert = repo.GetTimeSlots(reservationToInsert);
+
+
+
+            return View(reservationToInsert);
+        }
+
 
         public IActionResult DeleteReservation(Reservation reservation)
         {

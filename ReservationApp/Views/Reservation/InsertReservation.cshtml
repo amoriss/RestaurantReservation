@@ -1,6 +1,6 @@
 ﻿@model Reservation
 <h2>Create a New Reservation</h2>
-@using (Html.BeginForm("SelectTime", "Reservation", FormMethod.Get))
+@using (Html.BeginForm("SelectTime", "Reservation", FormMethod.Post))
 {
     <input asp-for="ID" type="hidden" value="" />
 
@@ -14,28 +14,13 @@
     <label asp-for="Date" class="control-label">Date</label>
     <input type="date" name="Date" class="form-control" value="@Model.Date" />
 
-    @*<label asp-for="Date" class="control-label">1:15 pm</label>
-        <input type="radio" value="1:15" id="Gender" name="Date" />
-
-
-        <label asp-for="Time" class="control-label">Time</label>
-        <input type="time" step="900" name="Time" class="form-control" />*@
+   
 
     <label asp-for="Table_Size" class="control-label">Table Size</label>
     <input type="number" name="Table_Size" class="form-control" value="@Model.Table_Size" />
     
     
-       
-    <div class="form-group">
-        <label for="">Select a Time Slot</label>
-        @*<select class="form-control" name="ID" value="">
-                @foreach (var res in Model.TimeSlots)
-                {
-                    <option value="@res.ID">@res.ID @res.Time</option>
-                }
-                <a href="C:\Users\amori\repos\RestaurantReservation\ReservationApp\Views\_ViewStart.cshtml">C:\Users\amori\repos\RestaurantReservation\ReservationApp\Views\_ViewStart.cshtml</a>
-            </select>*@
-    </div>
+  
     <input type="submit" value="Select Time" class="btn btn-primary" />
 
 }
