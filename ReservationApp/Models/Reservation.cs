@@ -26,6 +26,9 @@ namespace ReservationApp.Models
         {
 
             return Date.ToString().Substring(0, 10);
+
+
+            
         }
     }
 }
