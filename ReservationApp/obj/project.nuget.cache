@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LQgHrRThAKD3OBw87bwNN1bfpg7mGpmForz3NjCoAbNZ66Jwk8LAjsqzWZP+U72sdrx2SPDWLgGJDoq2FOt8+g==",
+  "dgSpecHash": "jk0VFhS5EgIXqgYDWusxX8rlEY/JBWLeKubxdgvlhEziasBi6hBy8rlYXNBAcZwGoX/fOgXMKx9pxZ/nVHCs1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amori\\repos\\RestaurantReservation\\ReservationApp\\ReservationApp.csproj",
+  "projectFilePath": "C:\\Users\\amori\\Original\\RestaurantReservation\\ReservationApp\\ReservationApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amori\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\amori\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
