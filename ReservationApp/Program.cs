@@ -11,6 +11,7 @@ namespace ReservationApp
 {
     public class Program
     {
+        //startup file erased
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
